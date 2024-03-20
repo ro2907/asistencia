@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencia de Alumnos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- <div id="container">
+        <h1>Asistencia de Alumnos</h1>
+        <button id="scanButton">Escanear QR</button>
+        <button id="tardanzaButton">Tardanza</button>
+        <button id="generateExcelButton">Generar Excel</button>
+        <input type="text" id="manualInput" placeholder="Agregar alumno manualmente">
+        <button id="addManualButton">Agregar Manualmente</button>
+        <video id="preview"></video>
+        <ol id="studentList"></ol>
+    </div> -->
+    <nav class="navbar">
+        <h1>Asistencia de Alumnos</h1>
+    </nav>
+
+    <div class="container">
+        <div style="display: flex; gap: 10px;">
+            <button id="scanButton">Escanear QR</button>
+            <button id="tardanzaButton">Tardanza</button>
+            <button id="generateExcelButton">Generar Excel</button>
+        </div>
+        <input type="text" id="manualInput" placeholder="Agregar alumno manualmente">
+        <button id="addManualButton">Agregar</button>
+        <video id="preview"></video>
+        <div id="confirmationContainer"></div>
+        <ol id="studentList"></ol>
+       
+    </div>
+
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script src="FileSaver.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

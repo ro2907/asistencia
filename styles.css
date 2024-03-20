@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+}
+
+#container {
+    text-align: center;
+    margin-top: 20px;
+}
+.container {
+    padding: 20px;
+}
+#preview {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
+}
+
+.confirmation-tick {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: rgb(81, 255, 0);
+    pointer-events: none; /* Evitar que la tilde interfiera con los clics en el código QR */
+}
+
+.scanned-circle {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.red {
+    background-color: #ff5555;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+video {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#confirmationContainer {
+    position: relative;
+}
+
+.scanned-circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+}
