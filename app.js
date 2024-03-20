@@ -46,18 +46,11 @@ function toggleScan() {
 
 function startScan() {
     Instascan.Camera.getCameras().then(function (cameras) {
-        let selectedCamera = null;
-        cameras.forEach(camera => {
-            if (camera.facing === 'environment') {
-                selectedCamera = camera;
-            }
-        });
-
-        if (selectedCamera) {
+        if (cameras.length > 0) {
             scanner.addListener('scan', handleScan);
-            scanner.start(selectedCamera);
+            scanner.start(cameras[1]);
         } else {
-            console.error('No se encontró la cámara trasera.');
+            console.error('No se encontraron cámaras.');
         }
     }).catch(function (e) {
         console.error(e);
