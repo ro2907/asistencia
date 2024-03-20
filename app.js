@@ -46,11 +46,19 @@ function toggleScan() {
 
 function startScan() {
     Instascan.Camera.getCameras().then(function (cameras) {
-        if (cameras.length > 0) {
+        let selectedCamera = null;
+        cameras.forEach(camera => {
+            if (camera.facing === 'environment') {
+                selectedCamera = camera;
+            }
+        });
+
+        if (selectedCamera) {
             scanner.addListener('scan', handleScan);
-            scanner.start(cameras[1]);
+            scanner.start(selectedCamera);
+            document.getElementById('preview').style.transform = selectedCamera.mirror ? 'scaleX(-1)' : 'none';
         } else {
-            console.error('No se encontraron cámaras.');
+            console.error('No se encontró la cámara trasera.');
         }
     }).catch(function (e) {
         console.error(e);
