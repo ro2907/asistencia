@@ -84,6 +84,7 @@ video {
     max-width: 200px;
     display: block;
     margin-bottom: 20px;
+    transform: scaleX(-1);
 }
 
 #confirmationContainer {
